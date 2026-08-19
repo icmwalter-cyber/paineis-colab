@@ -1,4 +1,4 @@
-﻿# Painéis de IA no Google Colab — um play e pronto
+# Painéis de IA no Google Colab — um play e pronto
 
 Dois painéis visuais que rodam de graça no Google Colab. Você abre o link, aperta **um** botão,
 espera, e usa numa página cheia de botões. **Não precisa escrever código nenhum.**
@@ -91,17 +91,33 @@ vá na aba **LoRAs**, clique em **Refresh** e ligue a caixinha dela.
 
 ---
 
-## Se der erro em inglês
+## Se der erro
 
-Procure a **última linha** — é lá que está o motivo.
+Procure a **ultima linha** do que apareceu — e la que esta o motivo. Os tres casos reais:
 
-**Falou em `CUDA` ou `Torch not compiled`?** A sessão está **sem placa de vídeo**. Volte ao
-passo 1. É de longe o erro mais comum.
+### 1. "Nao e possivel conectar a GPU" / "limites de uso do Colab"
 
-**Não aparece link nenhum, mas também não há erro?** Só espere mais: ainda está baixando.
+Uma janelinha do Colab avisa isso e so oferece **"Conectar sem GPU"**. Significa que a sua
+**cota gratuita de placa de video acabou por hoje** — o Colab da algumas horas por dia de graca
+e voce ja gastou as suas. Nao ha ajuste que resolva: quem fechou a torneira foi o Google.
 
-**O Colab diz que a T4 não está disponível?** Acontece na conta gratuita em horário cheio.
-Tente mais tarde ou use outra conta Google.
+O que fazer:
+
+- **esperar.** Costuma voltar em algumas horas, e quase sempre no dia seguinte;
+- **abrir o mesmo link com a outra conta do Google** (a cota e por conta, nao por computador);
+- **no caso das fotos, usar o Fooocus instalado no proprio computador**:
+  `Documentos > Fooocus_win64_2-1-831 > run.bat`. Faz a mesma coisa, so mais devagar.
+
+Se voce clicar em "Conectar sem GPU", o caderno para de proposito e explica isso tudo de novo.
+
+### 2. Falou em `CUDA` ou `Torch not compiled`
+
+A sessao esta **sem placa de video** porque voce ainda nao escolheu a T4. Volte ao passo 1
+de "Como usar".
+
+### 3. Nao aparece link nenhum, e tambem nao ha erro
+
+So espere mais: ainda esta baixando. Na primeira vez sao varios GB.
 
 ---
 
